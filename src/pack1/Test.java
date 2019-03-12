@@ -15,7 +15,7 @@ public class Test extends GraphicsProgram  {
 	GCanvas canvas;
 	
 	void setup() {
-		this.setSize(500, 500);
+		this.setSize(1000, 500);
 		this.setVisible(true);
 		this.setTitle("My Picture"); 
 		
@@ -23,20 +23,51 @@ public class Test extends GraphicsProgram  {
 		this.add(canvas);
 		
 		this.drawHouse();
-		//this.drawSun();
-		//this.drawTree();
 		
 		canvas.revalidate();
-	}
+	}// setup calls drawhouse
 	
 	void drawHouse() {
 		// Colors for the house
 		Color lightBlue = new Color(183, 234, 237);
 		
+		// Draw the body of house
+		GRect body = new GRect(200,200);
+		canvas.add(body, 150, 250);
+		body.setColor(Color.green);
+		body.setFilled(true);
 		
+		this.drawRoof();
+		this.drawDoor();
 		
-	}
+		// window
+		GRect window = new GRect(50 , 50);
+		canvas.add(window, 280, 350);
+		window.setColor(lightBlue);
+		window.setFilled(true);
+	} // drawHouse
 	
+	void drawRoof() {
+		// Draws the roof
+		//GLine leftRoof = new GLine(150, 250, 250, 150);
+		//canvas.add(leftRoof);
+		//GLine rightRoof = new GLine(350, 250, 250, 150);
+		//canvas.add(rightRoof);
+		
+		GPolygon roof = new GPolygon();
+		roof.addVertex(0, 0);
+		roof.addVertex(100, -100);
+		roof.addVertex(200, 0);
+		roof.setColor(Color.red);
+		roof.setFilled(true);
+		roof.scale(1.0, 0.75);
+		canvas.add(roof, 150, 250);
+		
+	}// draw roof
+	
+	void drawDoor() {
+		
+	} // draw Door
 	
 	
 	
@@ -45,6 +76,7 @@ public class Test extends GraphicsProgram  {
 		GLabel label1 = new GLabel("Hello world");
 		add(label1, 100, 75);
 		//GPen testPen(5,5);
+		setup();
 		
 		for (int i = 0; i < 20; i++) {
 			label1.move(1, 1);
