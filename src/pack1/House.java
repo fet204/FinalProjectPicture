@@ -37,7 +37,7 @@ public class House extends GraphicsProgram {
 		add(pen);
 		
 		//1 means code will instantly show art, and 0 would be the slowest 
-		pen.setSpeed(1);
+		pen.setSpeed(.75);
 		
 		// Outline of house
 		pen.setColor(Color.BLACK);
@@ -61,6 +61,10 @@ public class House extends GraphicsProgram {
 		roof.addVertex(500, 100);
 		roof.addVertex(300, 100);
 		roof.addVertex(400, 0);
+		roof.setColor(Color.red);
+		roof.setFilled(true);
+		add(roof, 200, 0);
+		
 		
 		
 		
