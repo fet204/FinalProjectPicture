@@ -47,6 +47,10 @@ public class Test extends GraphicsProgram  {
 		window.setFilled(true);
 	} // drawHouse
 	
+	
+	
+	//lkhkljh
+	
 	void drawRoof() {
 		// Draws the roof
 		//GLine leftRoof = new GLine(150, 250, 250, 150);
