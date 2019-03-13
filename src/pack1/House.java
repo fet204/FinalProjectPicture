@@ -72,6 +72,14 @@ public class House extends GraphicsProgram {
 		door.setColor(doorColor);
 		door.setFilled(true);
 		
+		// Windows 
+		Color lightBLue = new Color(181, 242, 255);
+		GRect window = new GRect(50, 50);
+		window.setColor(lightBLue);
+		window.setFilled(true);
+		add(window, 630, 130);
+		
+		
 		
 		
 		
