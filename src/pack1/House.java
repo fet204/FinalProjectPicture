@@ -14,9 +14,6 @@ import java.awt.Color;
  * https://color.adobe.com/create/color-wheel/
  */
 
-
-
-
 // BASIC HOUSE ART	
 public class House extends GraphicsProgram {
 	
@@ -73,43 +70,43 @@ public class House extends GraphicsProgram {
 		door.setFilled(true);
 		
 		// Windows 
-		Color lightBLue = new Color(181, 242, 255);
+		Color lightBlue = new Color(181, 242, 255);
 		GRect window = new GRect(50, 50);
-		window.setColor(lightBLue);
+		window.setColor(lightBlue);
 		window.setFilled(true);
 		add(window, 630, 130);
 		
+		// Second window
+		GRect window2 = new GRect(50, 50);
+		window2.setColor(lightBlue);
+		window2.setFilled(true);
+		add(window2, 520, 130);
 		
+		// Setting the color for the tree
+		Color brown = new Color(105, 74, 78);
+		Color darkGreen = new Color(36, 138, 60);
 		
+		// Drawing the trunk on the tree
+		GRect trunk = new GRect(10, 150); // the size of the shape
+		trunk.setColor(brown);
+		trunk.setFilled(true);
+		add(trunk, 300, 150);
 		
+		// leaves on top
+		GOval leaves = new GOval(100,75);
+		leaves.setColor(darkGreen);
+		leaves.setFilled(true);
+		add(leaves, 255, 100);
 		
-		
-		
-		
-		
+		// Draw Sun
+		GOval sun = new GOval(50,50);
+		sun.setColor(Color.yellow);
+		sun.setFilled(true);
+		add(sun, 100, 0);
+				
 		
 	}// run
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 } // Graphics program
