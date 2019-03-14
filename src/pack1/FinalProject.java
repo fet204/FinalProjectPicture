@@ -15,8 +15,8 @@ import java.awt.*;
 
 public class FinalProject extends GraphicsProgram {
 	
-	public static final int height = 500; 
-	public static final int width = 1000;
+	public static final int height = 500; // originally 500
+	public static final int width = 1000; // originally 100
 	
 	public void init() {
 		
@@ -27,7 +27,7 @@ public class FinalProject extends GraphicsProgram {
 	public void run() {
 		
 		// Start coordinate of where GPen will be and start
-		GPen pen = new GPen(500, 100);
+		GPen pen = new GPen(500, 100); // orignially x is 500 and y is 100
 		add(pen);
 		
 		//1 means code will instantly show art, and 0 would be the slowest 
@@ -47,7 +47,7 @@ public class FinalProject extends GraphicsProgram {
 		pen.setColor(sky1);
 		pen.move(-500, -100);
 		pen.drawLine(1000,0);
-		for (int i = 2; i <= 300; i ++) {
+		for (int i = 2; i <= 500; i ++) {
 			pen.move(0, 1);
 			if(i == 25) {
 				sky1 = new Color (131, 167, 228);
@@ -97,12 +97,10 @@ public class FinalProject extends GraphicsProgram {
 				sky1 = new Color (144, 185, 226);
 				pen.setColor(sky1);
 			}
-			
-			
-			
-			
-			
-			
+			if (i == 301) {
+				sky1 = new Color(96,144,120);
+				pen.setColor(sky1);
+			}
 			
 			
 			
@@ -114,9 +112,19 @@ public class FinalProject extends GraphicsProgram {
 				pen.drawLine(1000, 0);	
 		}// first block sky21
 		
-		
-		
-		
+		for (int i = 0; i < 200; i++) {
+			pen.move(600, 0);
+			int x = 2;
+			x += (x+2);
+			
+			if (i % 2 == 0) {
+				pen.drawLine(x,0);
+				pen.move(0,-1);
+			}
+			else 
+				pen.drawLine(-x, 0);
+			pen.move(0,-1);
+		}
 		
 		
 		
