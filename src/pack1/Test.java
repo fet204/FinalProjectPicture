@@ -42,18 +42,17 @@ public class Test extends GraphicsProgram {
 		pen.setColor(sky1);
 		pen.move(-500, -100);
 		pen.move(0,200);
-		//pen.drawLine(1000,0);
-		double x = .001;
-		int y = 20;
+		double x = 1;
+		double y = 0;
 		for (int i = 2; i <= 200; i ++) {
 			
-			if (i % 5 == 0) {
-				x += (x + .005);
-				System.out.println(x);
+			if (i % 2 == 0) {
+				y = ((i*i)/60);
+				System.out.println(y);
 			}
 			
-			pen.drawLine(x, 0);
-			pen.move(-x, -1);
+			pen.drawLine(y, 0);
+			pen.move(-y, -1);
 			
 		}// first block sky21
 		
