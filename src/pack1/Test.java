@@ -41,32 +41,16 @@ public class Test extends GraphicsProgram {
 		Color sky1 = new Color(137, 164, 227);
 		pen.setColor(sky1);
 		pen.move(-500, -100);
-		pen.drawLine(1000,0);
-		for (int i = 2; i <= 250; i ++) {
+		pen.move(0,200);
+		//pen.drawLine(1000,0);
+		for (int i = 2; i <= 200; i ++) {
 			pen.move(0, 1);
-			if(i == 25) {
-				sky1 = new Color (131, 167, 228);
-				pen.setColor(sky1);
-			}
-			if(i == 50) {
-				sky1 = new Color (136, 168, 228);
-				pen.setColor(sky1);
-			}
-			if(i == 75) {
-				sky1 = new Color (136, 168, 229);
-				pen.setColor(sky1);
-			}
-			if(i == 100) {
-				sky1 = new Color (136, 168, 229);
-				pen.setColor(sky1);
-			}
-			
 			
 			if (i % 2 == 0) {
-				pen.drawLine(-1000, 0);
+				pen.drawLine(1000, 0);
 			}
 			else
-				pen.drawLine(1000, 0);	
+				pen.drawLine(-1000, 0);	
 		}// first block sky21
 		
 		
