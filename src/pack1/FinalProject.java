@@ -1,6 +1,11 @@
 /*
  * File: FinalProject.java
  * Function: This is going to be the picture for my final project. 
+ * 
+ * WEBSITES THAT HELP 
+ * https://imagecolorpicker.com/
+ * https://color.adobe.com/create/color-wheel/
+ * 
  */
 package pack1;
 
@@ -57,6 +62,10 @@ public class FinalProject extends GraphicsProgram {
 				pen.setColor(sky1);
 			}
 			if(i == 100) {
+				sky1 = new Color (139, 169, 229);
+				pen.setColor(sky1);
+			}
+			if(i == 125) {
 				sky1 = new Color (139, 169, 229);
 				pen.setColor(sky1);
 			}
