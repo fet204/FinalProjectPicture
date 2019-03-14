@@ -1,12 +1,9 @@
 package pack1;
 
 import acm.program.GraphicsProgram;
-import acm.graphics.GLabel;
-import acm.graphics.GOval;
 import acm.graphics.GPen;
-import acm.graphics.*;
 import java.awt.*;
-import acm.graphics.GPolygon;
+
 import java.awt.Color;
 
 /* websites
@@ -15,7 +12,7 @@ import java.awt.Color;
  */
 
 // BASIC HOUSE ART	
-public class House extends GraphicsProgram {
+public class OnlyGPen extends GraphicsProgram {
 	
 	// Size set of the art
 	public static final int height = 500; 
@@ -37,9 +34,11 @@ public class House extends GraphicsProgram {
 		pen.setSpeed(0.1);
 		
 		// Outline of house
-		pen.setColor(Color.BLACK);
+		Color lime = new Color(97, 255, 73);
+		pen.setColor(lime);
 		
 		// Fill in house
+		//Color lime = new Color(97, 255, 73);
 		pen.setFillColor(new Color(97, 255, 73));
 		
 		//Where rectangle will be coordinated in the appletViewer
@@ -53,6 +52,14 @@ public class House extends GraphicsProgram {
 		
 		pen.endFilledRegion();
 		
+		
+		
+		
+		
+		
+		
+		
+		/*
 		// Draw Roof by connecting vertices 
 		GPolygon roof = new GPolygon();
 		roof.addVertex(500, 100);
@@ -103,7 +110,7 @@ public class House extends GraphicsProgram {
 		sun.setColor(Color.yellow);
 		sun.setFilled(true);
 		add(sun, 100, 0);
-				
+		*/		
 		
 	}// run
 	
