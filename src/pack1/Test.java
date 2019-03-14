@@ -40,14 +40,14 @@ public class Test extends GraphicsProgram {
 		// The Sky
 		Color sky1 = new Color(137, 164, 227);
 		pen.setColor(sky1);
-		pen.move(-500, -100);
-		pen.move(0,200);
-		double x = 1;
+		pen.move(-511, -100);
+		pen.move(0,500);
+		double x = .1;
 		double y = 0;
-		for (int i = 2; i <= 200; i ++) {
+		for (int i = 2; i <= 284; i ++) {
 			
 			if (i % 2 == 0) {
-				y = ((i*i)/60);
+				y = ((i*i)/80);
 				System.out.println(y);
 			}
 			

@@ -112,19 +112,22 @@ public class FinalProject extends GraphicsProgram {
 				pen.drawLine(1000, 0);	
 		}// first block sky21
 		
-		for (int i = 2; i < 200; i++) {
-			pen.move(600, 0);
-			int x = 2;
-			x += (x+2);
+		Color sky2 = new Color(137, 164, 227);
+		pen.setColor(sky2);
+		pen.move(-5, 83);
+		//pen.move(0,500);
+		double y = 0;
+		for (int i = 2; i <= 284; i ++) {
 			
 			if (i % 2 == 0) {
-				pen.drawLine(x,0);
-				pen.move(0,-1);
+				y = ((i*i)/80);
+				System.out.println(y);
 			}
-			else 
-				pen.drawLine(-x, 0);
-			pen.move(0,-1);
-		}
+			
+			pen.drawLine(y, 0);
+			pen.move(-y, -1);
+			
+		}// first block for the side and bottom
 		
 		
 		
