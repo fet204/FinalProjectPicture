@@ -16,7 +16,7 @@ import java.awt.*;
 public class FinalProject extends GraphicsProgram {
 	
 	public static final int height = 500; // originally 500
-	public static final int width = 1000; // originally 100
+	public static final int width = 1500; // originally 1000
 	
 	public void init() {
 		
@@ -112,7 +112,7 @@ public class FinalProject extends GraphicsProgram {
 				pen.drawLine(1000, 0);	
 		}// first block sky21
 		
-		for (int i = 0; i < 200; i++) {
+		for (int i = 2; i < 200; i++) {
 			pen.move(600, 0);
 			int x = 2;
 			x += (x+2);
