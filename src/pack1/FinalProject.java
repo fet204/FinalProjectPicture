@@ -47,7 +47,7 @@ public class FinalProject extends GraphicsProgram {
 		pen.setColor(sky1);
 		pen.move(-500, -100);
 		pen.drawLine(1000,0);
-		for (int i = 2; i <= 250; i ++) {
+		for (int i = 2; i <= 300; i ++) {
 			pen.move(0, 1);
 			if(i == 25) {
 				sky1 = new Color (131, 167, 228);
@@ -66,9 +66,45 @@ public class FinalProject extends GraphicsProgram {
 				pen.setColor(sky1);
 			}
 			if(i == 125) {
-				sky1 = new Color (139, 169, 229);
+				sky1 = new Color (139, 169, 228);
+				pen.setColor(sky1);
+			}			
+			if(i == 150) {
+				sky1 = new Color (139, 170, 228);
 				pen.setColor(sky1);
 			}
+			if(i == 175) {
+				sky1 = new Color (137, 174, 227);
+				pen.setColor(sky1);
+			}		
+			if(i == 200) {
+				sky1 = new Color (140, 176, 226);
+				pen.setColor(sky1);
+			}
+			if(i == 225) {
+				sky1 = new Color (142, 179, 224);
+				pen.setColor(sky1);
+			}
+			if(i == 250) {
+				sky1 = new Color (144, 181, 226);
+				pen.setColor(sky1);
+			}
+			if(i == 275) {
+				sky1 = new Color (146, 183, 228);
+				pen.setColor(sky1);
+			}
+			if(i == 300) {
+				sky1 = new Color (144, 185, 226);
+				pen.setColor(sky1);
+			}
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			if (i % 2 == 0) {
