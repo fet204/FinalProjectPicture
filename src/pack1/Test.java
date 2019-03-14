@@ -43,14 +43,18 @@ public class Test extends GraphicsProgram {
 		pen.move(-500, -100);
 		pen.move(0,200);
 		//pen.drawLine(1000,0);
+		double x = .001;
+		int y = 20;
 		for (int i = 2; i <= 200; i ++) {
-			pen.move(0, 1);
 			
-			if (i % 2 == 0) {
-				pen.drawLine(1000, 0);
+			if (i % 5 == 0) {
+				x += (x + .005);
+				System.out.println(x);
 			}
-			else
-				pen.drawLine(-1000, 0);	
+			
+			pen.drawLine(x, 0);
+			pen.move(-x, -1);
+			
 		}// first block sky21
 		
 		
