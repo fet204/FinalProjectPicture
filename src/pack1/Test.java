@@ -1,93 +1,74 @@
+/*
+ * File: FinalProject.java
+ * Function: This is going to be the picture for my final project. 
+ */
 package pack1;
 
-import acm.graphics.GLabel;
-import acm.program.*;
-import acm.graphics.*;
+import acm.program.GraphicsProgram;
+import acm.graphics.GPen;
+import java.awt.*;
 
-import java.awt.Color;
-import java.util.*;
-
-// https://www.youtube.com/watch?v=oW2apwWxetI
-// learning from this vid
-
-public class Test extends GraphicsProgram  {
+public class Test extends GraphicsProgram {
 	
-	GCanvas canvas;
+	public static final int height = 500; 
+	public static final int width = 1000;
 	
-	void setup() {
-		this.setSize(1000, 500);
-		this.setVisible(true);
-		this.setTitle("My Picture"); 
+	public void init() {
 		
-		canvas = new GCanvas();
-		this.add(canvas);
+		setSize(width, height);
 		
-		this.drawHouse();
-		
-		canvas.revalidate();
-	}// setup calls drawhouse
-	
-	void drawHouse() {
-		// Colors for the house
-		Color lightBlue = new Color(183, 234, 237);
-		
-		// Draw the body of house
-		GRect body = new GRect(200,200);
-		canvas.add(body, 150, 250);
-		body.setColor(Color.green);
-		body.setFilled(true);
-		
-		this.drawRoof();
-		this.drawDoor();
-		
-		// window
-		GRect window = new GRect(50 , 50);
-		canvas.add(window, 280, 350);
-		window.setColor(lightBlue);
-		window.setFilled(true);
-	} // drawHouse
-	
-	
-	
-	//lkhkljh
-	
-	void drawRoof() {
-		// Draws the roof
-		//GLine leftRoof = new GLine(150, 250, 250, 150);
-		//canvas.add(leftRoof);
-		//GLine rightRoof = new GLine(350, 250, 250, 150);
-		//canvas.add(rightRoof);
-		
-		GPolygon roof = new GPolygon();
-		roof.addVertex(0, 0);
-		roof.addVertex(100, -100);
-		roof.addVertex(200, 0);
-		roof.setColor(Color.red);
-		roof.setFilled(true);
-		roof.scale(1.0, 0.75);
-		canvas.add(roof, 150, 250);
-		
-	}// draw roof
-	
-	void drawDoor() {
-		
-	} // draw Door
-	
-	
-	
+	} // init
 	
 	public void run() {
-		GLabel label1 = new GLabel("Hello world");
-		add(label1, 100, 75);
-		//GPen testPen(5,5);
-		setup();
 		
-		for (int i = 0; i < 20; i++) {
-			label1.move(1, 1);
-			pause(100);
-	
-		} // the while loop
+		// Start coordinate of where GPen will be and start
+		GPen pen = new GPen(500, 100);
+		add(pen);
 		
-	} // run
-	
-}//Test class
+		//1 means code will instantly show art, and 0 would be the slowest 
+		pen.setSpeed(1); //0.7);
+		
+		// Outline of house
+		pen.setColor(Color.BLACK);
+		
+		// Fill in house
+		pen.setFillColor(new Color(97, 255, 73));
+		
+		//Where rectangle will be coordinated in the appletViewer
+		//pen.startFilledRegion();
+		
+		// The Sky
+		Color sky1 = new Color(137, 164, 227);
+		pen.setColor(sky1);
+		pen.move(-500, -100);
+		pen.drawLine(1000,0);
+		for (int i = 2; i <= 250; i ++) {
+			pen.move(0, 1);
+			if(i == 25) {
+				sky1 = new Color (131, 167, 228);
+				pen.setColor(sky1);
+			}
+			if(i == 50) {
+				sky1 = new Color (136, 168, 228);
+				pen.setColor(sky1);
+			}
+			if(i == 75) {
+				sky1 = new Color (136, 168, 229);
+				pen.setColor(sky1);
+			}
+			if(i == 100) {
+				sky1 = new Color (136, 168, 229);
+				pen.setColor(sky1);
+			}
+			
+			
+			if (i % 2 == 0) {
+				pen.drawLine(-1000, 0);
+			}
+			else
+				pen.drawLine(1000, 0);	
+		}// first block sky21
+		
+		
+	}
+}

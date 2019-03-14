@@ -29,35 +29,60 @@ public class FinalProject extends GraphicsProgram {
 		pen.setSpeed(1); //0.7);
 		
 		// Outline of house
-		pen.setColor(Color.BLACK);
+		//pen.setColor(Color.BLACK);
 		
 		// Fill in house
-		pen.setFillColor(new Color(97, 255, 73));
+		//pen.setFillColor(new Color(97, 255, 73));
 		
 		//Where rectangle will be coordinated in the appletViewer
 		//pen.startFilledRegion();
 		
-		int sky1 = 137;
-		int sky2 = 164;
-		int sky3 = 227;
-		
-		Color sky = new Color(sky1, sky2, sky3);
-		pen.setColor(sky);
+		// The Sky
+		Color sky1 = new Color(137, 164, 227);
+		pen.setColor(sky1);
 		pen.move(-500, -100);
 		pen.drawLine(1000,0);
-		for (int i = 2; i < 200; i ++) {
+		for (int i = 2; i <= 250; i ++) {
 			pen.move(0, 1);
-			if (i % 5 == 0) {
-				sky = new Color(sky1 + 1, sky2 + 2, sky3 + 1);
+			if(i == 25) {
+				sky1 = new Color (131, 167, 228);
+				pen.setColor(sky1);
 			}
+			if(i == 50) {
+				sky1 = new Color (136, 168, 228);
+				pen.setColor(sky1);
+			}
+			if(i == 75) {
+				sky1 = new Color (136, 168, 229);
+				pen.setColor(sky1);
+			}
+			if(i == 100) {
+				sky1 = new Color (139, 169, 229);
+				pen.setColor(sky1);
+			}
+			
+			
 			if (i % 2 == 0) {
 				pen.drawLine(-1000, 0);
 			}
 			else
-				pen.drawLine(1000, 0);
-			
-		}
-
+				pen.drawLine(1000, 0);	
+		}// first block sky21
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		/*
 		// Dimensions of Rectangle
