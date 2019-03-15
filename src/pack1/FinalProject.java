@@ -59,6 +59,7 @@ public class FinalProject extends GraphicsProgram {
 		Color betweenSidewalk = new Color(30, 45, 60);
 		Color sideWalkSeperatorSide = new Color(34, 35,37);
 		Color horzSideWalkSeperator = new Color(35, 52, 76);
+		Color streetCurveDashes = new Color(73, 114, 165);
 
 		
 		// The Sky
@@ -165,15 +166,32 @@ public class FinalProject extends GraphicsProgram {
 		// Drawing the background street curve dashes????
 		pen.setLocation(520,295);
 		pen.startFilledRegion();
-		pen.setColor(Color.red);
+		pen.setColor(streetCurveDashes);
 		pen.drawLine(-5, 0);
-		pen.drawLine(-1, -15);
+		pen.drawLine(-1, -10);
 		pen.drawLine(5, 0);
-		pen.drawLine(1, 15);
+		pen.drawLine(1, 10);
 		pen.endFilledRegion();
 
+		// Second Dash for background street curve
+		pen.setLocation(517, 275);
+		pen.startFilledRegion();
+		pen.setColor(streetCurveDashes);
+		pen.drawLine(-5, 0);
+		pen.drawLine(0, -10);
+		pen.drawLine(5, 0);
+		pen.drawLine(0, 10);
+		pen.endFilledRegion();
 		
-		
+		// Third Dash for background street curve
+		pen.setLocation(517, 260);
+		pen.startFilledRegion();
+		pen.setColor(streetCurveDashes);
+		pen.drawLine(-5, 0);
+		pen.drawLine(0, -10);
+		pen.drawLine(5, 0);
+		pen.drawLine(0, 10);
+		pen.endFilledRegion();
 		
 		
 		
