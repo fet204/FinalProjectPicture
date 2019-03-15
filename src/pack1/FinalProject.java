@@ -68,7 +68,7 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(1000,0);
 		for (int i = 0; i <= 500; i ++) {
 			pen.move(0, 1);
-			
+			//the blue sky
 			if(i == 20) {
 				sky1 = new Color (135, 167, 230);
 				pen.setColor(sky1);
@@ -90,43 +90,71 @@ public class FinalProject extends GraphicsProgram {
 			if(i == 100) {
 				sky1 = new Color (142, 173, 228);
 				pen.setColor(sky1);
-			}			
+			}		
+			
+			// Slowly increasing the green
 			if(i == 120) {
 				sky1 = new Color (139, 176, 228);
 				pen.setColor(sky1);
 			}
-			if(i == 140) {
+			if(i == 130) {
 				sky1 = new Color (137, 179, 227);
 				pen.setColor(sky1);
+			}
+			if(i == 140) {
+				sky1 = new Color (138, 182, 226);
+				pen.setColor(sky1);
 			}		
+			if(i == 150) {
+				sky1 = new Color (139, 185, 226);
+				pen.setColor(sky1);
+			}
+			//really hitting the green
 			if(i == 160) {
-				sky1 = new Color (140, 182, 226);
+				sky1 = new Color (140, 189, 226);
 				pen.setColor(sky1);
 			}
-			if(i == 180) {
-				sky1 = Color.darkGray;
+			if(i == 170) {
+				sky1 = new Color (140, 192, 226);
 				pen.setColor(sky1);
 			}
-			/*
-			if(i == 250) {
-				sky1 = new Color (144, 181, 226);
+			if (i == 180) {
+				sky1 = new Color (140, 189, 226);
 				pen.setColor(sky1);
 			}
-			if(i == 275) {
-				sky1 = new Color (146, 183, 228);
+			if (i == 190) {
+				sky1 = new Color(144, 192, 226);
 				pen.setColor(sky1);
 			}
-			if(i == 300) {
-				sky1 = new Color (144, 185, 226);
-				pen.setColor(sky1);
-			}
-			*/
 			
+			// switching the green to pink
+			if (i == 195) {
+				sky1 = new Color(154, 180, 221);
+				pen.setColor(sky1);
+			}
+			if (i == 200) {
+				sky1 = new Color(175, 180, 221);
+				pen.setColor(sky1);
+			}
+			if (i == 205) {
+				sky1 = new Color(189, 180, 229);
+				pen.setColor(sky1);
+			}
+			if (i == 209) {
+				sky1 = new Color(206, 180, 229);
+				pen.setColor(sky1);
+			}
+			
+			// HORZ POLES START JUST UNDER  y axis=212 and run to base block y=425
+
+			if(i == 212) {
+				sky1 = new Color (47, 70, 103);
+				pen.setColor(sky1);
+			}
+	
 			if (i == 300) {
 				pen.setColor(street);
 			}
-			
-			
 			if (i % 2 == 0) {
 				pen.drawLine(-1000, 0);
 			}
@@ -134,8 +162,39 @@ public class FinalProject extends GraphicsProgram {
 				pen.drawLine(1000, 0);	
 		}// first block sky21
 		
-		
+		// Drawing the background street curve dashes????
+		pen.setLocation(520,295);
+		pen.startFilledRegion();
+		pen.setColor(Color.red);
+		pen.drawLine(-5, 0);
+		pen.drawLine(-1, -15);
+		pen.drawLine(5, 0);
+		pen.drawLine(1, 15);
+		pen.endFilledRegion();
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		//base block holding poles
 		pen.setColor(pole);
@@ -155,6 +214,8 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(-1000, 0);
 		pen.endFilledRegion();
 		
+		
+		/*
 		// vertical rail way poles
 		pen.setLocation(0,325);
 		pen.setColor(pole);
@@ -199,6 +260,7 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(0, 10);
 		pen.drawLine(-1000, 0);
 		pen.endFilledRegion();
+		*/
 		
 		// Sidewalk side shadow definition
 		pen.setColor(sideWalkSide);
