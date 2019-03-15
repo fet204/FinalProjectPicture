@@ -4,6 +4,7 @@
  * 
  * WEBSITES THAT HELP 
  * https://www.colorcodepicker.com/
+ * https://html-color-codes.info/colors-from-image/
  * https://color.adobe.com/create/color-wheel/
  * 
  */
@@ -50,9 +51,12 @@ public class FinalProject extends GraphicsProgram {
 		Color sand = new Color(0, 142, 190);  //(247, 239, 215);
 		
 		//street colors
-		Color street = new Color(38, 55, 85);
-		Color pole = new Color(48, 75, 111);
-		Color shadow = new Color(38,55,85);
+		Color street = new Color(36, 56, 84);
+		Color pole = new Color(33, 39, 55);
+		Color shadow = new Color(34, 49, 70);
+		Color shadowTopBlock = new Color(40, 47, 83);
+		Color sideWalkSide = new Color(34, 49, 70);
+		Color betweenSidewalk = new Color(34, 49, 70);
 
 		
 		// The Sky
@@ -153,7 +157,8 @@ public class FinalProject extends GraphicsProgram {
 		pen.move(0, 30);
 		}
 		
-		//base pole block
+		//base block holding poles
+		pen.setColor(pole);
 		pen.setLocation(0,300);
 		pen.startFilledRegion();
 		pen.drawLine(1000, 0);
@@ -161,8 +166,17 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(-1000, 0);
 		pen.endFilledRegion();
 		
+		//base pole shadow top
+		pen.setColor(shadowTopBlock);
+		pen.setLocation(0,300);
+		pen.startFilledRegion();
+		pen.drawLine(1000, 0);
+		pen.drawLine(0, 10);
+		pen.drawLine(-1000, 0);
+		pen.endFilledRegion();
+		
 		// Quick shadow for bars
-		pen.setLocation(0,340);
+		pen.setLocation(0,330);
 		pen.setColor(shadow);
 		pen.startFilledRegion();
 		pen.drawLine(1000, 0);
@@ -170,10 +184,19 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(-1000, 0);
 		pen.endFilledRegion();
 		
+		// Sidewalk side shadow definition
+		pen.setColor(sideWalkSide);
+		pen.setLocation(0, 425);
+		pen.startFilledRegion();
+		pen.drawLine(1000, 0);
+		pen.drawLine(0, 10);
+		pen.drawLine(-1000, 0);
+		pen.endFilledRegion();
 		
-		
-		
-		
+		// sidewalk seperator betweenSidewalk
+		pen.setLocation(225,330);
+		pen.setColor(betweenSidewalk);
+		pen.drawLine(-20, 200);
 		
 		
 		
