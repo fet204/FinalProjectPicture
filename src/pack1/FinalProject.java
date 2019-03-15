@@ -146,15 +146,30 @@ public class FinalProject extends GraphicsProgram {
 			}
 		}
 		
-		// this is going to be the tree leaves
-		pen.setColor(Color.black);
+		// leaf 1
+		Color leafGreen = new Color(0, 99, 0);
+		pen.setColor(leafGreen);
+		pen.startFilledRegion();
 		pen.drawLine(-50, -25);
 		pen.drawLine(-20, 0);
-		pen.drawLine(-30, 30);
+		pen.drawLine(-20, 20);
+		pen.drawLine(0, 15);
+		pen.drawLine(10, -15);
+		pen.drawLine(20, -5);
+		pen.endFilledRegion();
 		
-		
-		
-		
+		// leaf2 
+		pen.move(60, 10);
+		leafGreen = new Color(0, 111, 0);
+		pen.setColor(leafGreen);
+		pen.startFilledRegion();
+		pen.drawLine(-25, -50);
+		pen.drawLine(-25, 10);
+		pen.drawLine(-10, 50);
+		pen.drawLine(10, -10);
+		pen.drawLine(10, -25);
+		pen.drawLine(42, 40);
+		pen.endFilledRegion();
 		
 		
 		
