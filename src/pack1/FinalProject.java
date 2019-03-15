@@ -3,7 +3,7 @@
  * Function: This is going to be the picture for my final project. 
  * 
  * WEBSITES THAT HELP 
- * https://imagecolorpicker.com/
+ * https://www.colorcodepicker.com/
  * https://color.adobe.com/create/color-wheel/
  * 
  */
@@ -42,12 +42,25 @@ public class FinalProject extends GraphicsProgram {
 		//Where rectangle will be coordinated in the appletViewer
 		//pen.startFilledRegion();
 		
+		//colors 
+		Color water = new Color(51,127,57);    //(0, 142, 190);
+		Color brownWood = new Color(0, 142, 190);    //(87, 74, 67);
+		Color leafGreen1 = new Color(0, 99, 0);
+		Color leafGreen2 = new Color(0, 111, 0);
+		Color sand = new Color(0, 142, 190);  //(247, 239, 215);
+		
+		//street colors
+		Color street = new Color(38, 55, 85);
+		Color pole = new Color(48, 75, 111);
+		Color shadow = new Color(38,55,85);
+
+		
 		// The Sky
 		Color sky1 = new Color(137, 164, 227);
 		pen.setColor(sky1);
 		pen.move(-500, -100);
 		pen.drawLine(1000,0);
-		for (int i = 2; i <= 500; i ++) {
+		for (int i = 0; i <= 500; i ++) {
 			pen.move(0, 1);
 			if(i == 25) {
 				sky1 = new Color (131, 167, 228);
@@ -65,6 +78,8 @@ public class FinalProject extends GraphicsProgram {
 				sky1 = new Color (139, 169, 229);
 				pen.setColor(sky1);
 			}
+			
+			/*
 			if(i == 125) {
 				sky1 = new Color (139, 169, 228);
 				pen.setColor(sky1);
@@ -97,12 +112,11 @@ public class FinalProject extends GraphicsProgram {
 				sky1 = new Color (144, 185, 226);
 				pen.setColor(sky1);
 			}
-			if (i == 301) {
-				sky1 = new Color(247, 239, 215);
-				pen.setColor(sky1);
+			
+			*/
+			if (i == 300) {
+				pen.setColor(street);
 			}
-			
-			
 			
 			
 			if (i % 2 == 0) {
@@ -112,8 +126,75 @@ public class FinalProject extends GraphicsProgram {
 				pen.drawLine(1000, 0);	
 		}// first block sky21
 		
-		// Left side blue thing
-		Color water = new Color(0, 142, 190);
+		pen.setLocation(0,325);
+		pen.setColor(pole);
+		
+		// rail way poles
+		for (int i = 0; i < 4; i++ ) {
+		pen.move(190, 0);
+		pen.startFilledRegion();
+		pen.drawLine(0, -100);
+		pen.drawLine(10, 0);
+		pen.drawLine(0, 100);
+		pen.endFilledRegion();
+		}
+		
+		pen.setLocation(0,225);
+		
+		//side poles
+		for (int i = 0; i < 3; i++) { 
+		pen.startFilledRegion();
+		pen.drawLine(1000, 0);
+		pen.drawLine(0, -10);
+		pen.drawLine(-1000, 0);
+		pen.drawLine(0, 10);
+		pen.endFilledRegion();
+		
+		pen.move(0, 30);
+		}
+		
+		//base pole block
+		pen.setLocation(0,300);
+		pen.startFilledRegion();
+		pen.drawLine(1000, 0);
+		pen.drawLine(0, 30);
+		pen.drawLine(-1000, 0);
+		pen.endFilledRegion();
+		
+		// Quick shadow for bars
+		pen.setLocation(0,340);
+		pen.setColor(shadow);
+		pen.startFilledRegion();
+		pen.drawLine(1000, 0);
+		pen.drawLine(0, 10);
+		pen.drawLine(-1000, 0);
+		pen.endFilledRegion();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		// Left side parabola
 		pen.setColor(water);
 		pen.move(-5, 83);
 		//pen.move(0,500);
@@ -130,6 +211,7 @@ public class FinalProject extends GraphicsProgram {
 			
 		}// Left side blue thing
 		
+		
 		// this is going to be the tree trunk
 		pen.setColor(Color.black);
 		pen.move(1005, 0);
@@ -137,7 +219,6 @@ public class FinalProject extends GraphicsProgram {
 		
 		for(int i = 0; i <= 250; i ++) {
 			int var1 = 0;
-			Color brownWood = new Color(87, 74, 67);
 			if(i % 2 == 0) {
 				pen.setColor(brownWood);
 				pen.drawLine(25, 0);
@@ -147,8 +228,7 @@ public class FinalProject extends GraphicsProgram {
 		}
 		
 		// leaf 1
-		Color leafGreen = new Color(0, 99, 0);
-		pen.setColor(leafGreen);
+		pen.setColor(leafGreen1);
 		pen.startFilledRegion();
 		pen.drawLine(-50, -25);
 		pen.drawLine(-20, 0);
@@ -160,8 +240,7 @@ public class FinalProject extends GraphicsProgram {
 		
 		// leaf2 
 		pen.move(60, 10);
-		leafGreen = new Color(0, 111, 0);
-		pen.setColor(leafGreen);
+		pen.setColor(leafGreen2);
 		pen.startFilledRegion();
 		pen.drawLine(-25, -50);
 		pen.drawLine(-25, 10);
@@ -170,20 +249,6 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(10, -25);
 		pen.drawLine(42, 40);
 		pen.endFilledRegion();
-		
-		
-		
-		
-		
-		/*
-		// Dimensions of Rectangle
-		pen.drawLine(200, 0); // width
-		pen.drawLine(0, 200); // Height
-		pen.drawLine(-200, 0); // -Width
-		pen.drawLine(0, -200); // -Height
-		
-		pen.endFilledRegion();
-		
 		*/
 	
 	}
