@@ -56,7 +56,7 @@ public class FinalProject extends GraphicsProgram {
 		Color shadow = new Color(34, 49, 70);
 		Color shadowTopBlock = new Color(40, 47, 83);
 		Color sideWalkSide = new Color(34, 49, 70);
-		Color betweenSidewalk = new Color(34, 49, 70);
+		Color betweenSidewalk = new Color(30, 45, 60);
 
 		
 		// The Sky
@@ -194,9 +194,10 @@ public class FinalProject extends GraphicsProgram {
 		pen.endFilledRegion();
 		
 		// sidewalk seperator betweenSidewalk
-		pen.setLocation(225,330);
+		pen.setLocation(225,329);
 		pen.setColor(betweenSidewalk);
-		pen.drawLine(-20, 200);
+		pen.drawLine(-50, 95);
+		pen.drawLine(0, 10);
 		
 		
 		
