@@ -53,10 +53,12 @@ public class FinalProject extends GraphicsProgram {
 		//street colors
 		Color street = new Color(36, 56, 84);
 		Color pole = new Color(33, 39, 55);
-		Color shadow = new Color(34, 49, 70);
+		Color blockShadow = new Color(34, 49, 70);
 		Color shadowTopBlock = new Color(40, 47, 83);
 		Color sideWalkSide = new Color(34, 49, 70);
 		Color betweenSidewalk = new Color(30, 45, 60);
+		Color sideWalkSeperatorSide = new Color(34, 35,37);
+		Color horzSideWalkSeperator = new Color(35, 52, 76);
 
 		
 		// The Sky
@@ -66,44 +68,46 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(1000,0);
 		for (int i = 0; i <= 500; i ++) {
 			pen.move(0, 1);
-			if(i == 25) {
-				sky1 = new Color (131, 167, 228);
-				pen.setColor(sky1);
-			}
-			if(i == 50) {
-				sky1 = new Color (136, 168, 228);
-				pen.setColor(sky1);
-			}
-			if(i == 75) {
-				sky1 = new Color (136, 168, 229);
-				pen.setColor(sky1);
-			}
-			if(i == 100) {
-				sky1 = new Color (139, 169, 229);
+			
+			if(i == 20) {
+				sky1 = new Color (135, 167, 230);
 				pen.setColor(sky1);
 			}
 			
-			/*
-			if(i == 125) {
-				sky1 = new Color (139, 169, 228);
+			if(i == 40) {
+				sky1 = new Color (136, 168, 229);
+				pen.setColor(sky1);
+			}
+			
+			if(i == 60) {
+				sky1 = new Color (138, 169, 229);
+				pen.setColor(sky1);
+			}
+			if(i == 80) {
+				sky1 = new Color (140, 171, 229);
+				pen.setColor(sky1);
+			}
+			if(i == 100) {
+				sky1 = new Color (142, 173, 228);
 				pen.setColor(sky1);
 			}			
-			if(i == 150) {
-				sky1 = new Color (139, 170, 228);
+			if(i == 120) {
+				sky1 = new Color (139, 176, 228);
 				pen.setColor(sky1);
 			}
-			if(i == 175) {
-				sky1 = new Color (137, 174, 227);
+			if(i == 140) {
+				sky1 = new Color (137, 179, 227);
 				pen.setColor(sky1);
 			}		
-			if(i == 200) {
-				sky1 = new Color (140, 176, 226);
+			if(i == 160) {
+				sky1 = new Color (140, 182, 226);
 				pen.setColor(sky1);
 			}
-			if(i == 225) {
-				sky1 = new Color (142, 179, 224);
+			if(i == 180) {
+				sky1 = Color.darkGray;
 				pen.setColor(sky1);
 			}
+			/*
 			if(i == 250) {
 				sky1 = new Color (144, 181, 226);
 				pen.setColor(sky1);
@@ -116,8 +120,8 @@ public class FinalProject extends GraphicsProgram {
 				sky1 = new Color (144, 185, 226);
 				pen.setColor(sky1);
 			}
-			
 			*/
+			
 			if (i == 300) {
 				pen.setColor(street);
 			}
@@ -130,32 +134,8 @@ public class FinalProject extends GraphicsProgram {
 				pen.drawLine(1000, 0);	
 		}// first block sky21
 		
-		pen.setLocation(0,325);
-		pen.setColor(pole);
 		
-		// rail way poles
-		for (int i = 0; i < 4; i++ ) {
-		pen.move(190, 0);
-		pen.startFilledRegion();
-		pen.drawLine(0, -100);
-		pen.drawLine(10, 0);
-		pen.drawLine(0, 100);
-		pen.endFilledRegion();
-		}
-		
-		pen.setLocation(0,225);
-		
-		//side poles
-		for (int i = 0; i < 3; i++) { 
-		pen.startFilledRegion();
-		pen.drawLine(1000, 0);
-		pen.drawLine(0, -10);
-		pen.drawLine(-1000, 0);
-		pen.drawLine(0, 10);
-		pen.endFilledRegion();
-		
-		pen.move(0, 30);
-		}
+
 		
 		//base block holding poles
 		pen.setColor(pole);
@@ -175,9 +155,45 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(-1000, 0);
 		pen.endFilledRegion();
 		
+		// vertical rail way poles
+		pen.setLocation(0,325);
+		pen.setColor(pole);
+		for (int i = 0; i < 4; i++ ) {
+		pen.move(190, 0);
+		pen.startFilledRegion();
+		pen.drawLine(0, -100);
+		pen.drawLine(10, 0);
+		pen.drawLine(0, 100);
+		pen.endFilledRegion();
+		}
+		
+		//horizontal grip poles
+		pen.setLocation(0,225);
+		pen.setColor(pole);
+		for (int i = 0; i < 3; i++) { 
+		pen.startFilledRegion();
+		pen.drawLine(1000, 0);
+		pen.drawLine(0, -10);
+		pen.drawLine(-1000, 0);
+		pen.drawLine(0, 10);
+		pen.endFilledRegion();
+		pen.move(0, 30);
+		}
+		
+		// Top shadow for the horz grip bar 
+		pen.setLocation(0, 217);
+		pen.setColor(shadowTopBlock);
+		pen.startFilledRegion();
+		pen.drawLine(1000, 0);
+		pen.drawLine(0, -2);
+		pen.drawLine(-1000,0);
+		pen.drawLine(0, 2);
+		pen.endFilledRegion();
+		
+		
 		// Quick shadow for bars
 		pen.setLocation(0,330);
-		pen.setColor(shadow);
+		pen.setColor(blockShadow);
 		pen.startFilledRegion();
 		pen.drawLine(1000, 0);
 		pen.drawLine(0, 10);
@@ -195,11 +211,21 @@ public class FinalProject extends GraphicsProgram {
 		
 		// sidewalk seperator betweenSidewalk
 		pen.setLocation(225,329);
-		pen.setColor(betweenSidewalk);
-		pen.drawLine(-50, 95);
-		pen.drawLine(0, 10);
+
+		for (int i = 0; i < 4; i++) {
+			pen.setColor(blockShadow);
+			int x = -50;
+			pen.drawLine(x, 95);
+			pen.setColor(sideWalkSeperatorSide);
+			pen.drawLine(0, 10);
+			pen.move(275, -105);
+		}
+
+		// horzSideWalkSeperator shadow 
 		
-		
+		pen.setLocation(0, 415);
+		pen.setColor(horzSideWalkSeperator);
+		pen.drawLine(1000, 0);
 		
 		
 		
