@@ -233,7 +233,9 @@ public class FinalProject extends GraphicsProgram {
 		pen.endFilledRegion();
 		
 		
-		/*
+		
+		// POLESSSSSSSSSSSSSSSSS
+		
 		// vertical rail way poles
 		pen.setLocation(0,325);
 		pen.setColor(pole);
@@ -278,7 +280,14 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(0, 10);
 		pen.drawLine(-1000, 0);
 		pen.endFilledRegion();
-		*/
+		
+		
+		//POLESSSSSSSSS
+		
+		
+		
+		
+		
 		
 		// Sidewalk side shadow definition
 		pen.setColor(sideWalkSide);
