@@ -98,7 +98,7 @@ public class FinalProject extends GraphicsProgram {
 				pen.setColor(sky1);
 			}
 			if (i == 301) {
-				sky1 = new Color(96,144,120);
+				sky1 = new Color(247, 239, 215);
 				pen.setColor(sky1);
 			}
 			
@@ -112,8 +112,9 @@ public class FinalProject extends GraphicsProgram {
 				pen.drawLine(1000, 0);	
 		}// first block sky21
 		
-		Color sky2 = new Color(137, 164, 227);
-		pen.setColor(sky2);
+		// Left side blue thing
+		Color water = new Color(0, 142, 190);
+		pen.setColor(water);
 		pen.move(-5, 83);
 		//pen.move(0,500);
 		double y = 0;
@@ -127,10 +128,29 @@ public class FinalProject extends GraphicsProgram {
 			pen.drawLine(y, 0);
 			pen.move(-y, -1);
 			
-		}// first block for the side and bottom
+		}// Left side blue thing
 		
+		// this is going to be the tree trunk
+		pen.setColor(Color.black);
+		pen.move(1005, 0);
+		pen.move(-70, 40);
 		
+		for(int i = 0; i <= 250; i ++) {
+			int var1 = 0;
+			Color brownWood = new Color(87, 74, 67);
+			if(i % 2 == 0) {
+				pen.setColor(brownWood);
+				pen.drawLine(25, 0);
+				pen.move(0, -1);
+				pen.drawLine(-25, 0);
+			}
+		}
 		
+		// this is going to be the tree leaves
+		pen.setColor(Color.black);
+		pen.drawLine(-50, -25);
+		pen.drawLine(-20, 0);
+		pen.drawLine(-30, 30);
 		
 		
 		
