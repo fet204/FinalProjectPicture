@@ -17,7 +17,7 @@ import java.awt.*;
 public class FinalProject extends GraphicsProgram {
 	
 	public static final int height = 500; // originally 500
-	public static final int width = 1500; // originally 1000
+	public static final int width = 1000; // originally 1000
 	
 	public void init() {
 		
