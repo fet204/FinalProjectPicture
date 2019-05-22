@@ -14,10 +14,12 @@ import acm.program.GraphicsProgram;
 import acm.graphics.GPen;
 import java.awt.*;
 
+import acm.graphics.*;
+
 public class FinalProject extends GraphicsProgram {
 	
 	public static final int height = 500; // originally 500
-	public static final int width = 1000; // originally 1000
+	public static final int width = 1010; // originally 1000
 	
 	public void init() {
 		
@@ -174,7 +176,7 @@ public class FinalProject extends GraphicsProgram {
 		pen.endFilledRegion();
 
 		// Second Dash for background street curve
-		pen.setLocation(517, 275);
+		pen.setLocation(517, 277);
 		pen.startFilledRegion();
 		pen.setColor(streetCurveDashes);
 		pen.drawLine(-5, 0);
@@ -188,13 +190,31 @@ public class FinalProject extends GraphicsProgram {
 		pen.startFilledRegion();
 		pen.setColor(streetCurveDashes);
 		pen.drawLine(-5, 0);
-		pen.drawLine(0, -10);
+		pen.drawLine(1, -16);
 		pen.drawLine(5, 0);
-		pen.drawLine(0, 10);
+		pen.drawLine(-1, 16);
 		pen.endFilledRegion();
 		
+		// Fourth Dash for background street curve 
+		pen.setLocation(519, 239);
+		pen.startFilledRegion();
+		//pen.setColor(Color.RED);
+		pen.setColor(streetCurveDashes);
+		pen.drawLine(-5, 0);
+		pen.drawLine(2, -6);
+		pen.drawLine(5, 0);
+		pen.drawLine(-2, 6);
+		pen.endFilledRegion();
 		
-		
+		// Fifth dash for background street curve 
+		pen.setLocation(519, 229);
+		pen.setColor(streetCurveDashes);
+		pen.startFilledRegion();
+		pen.drawLine(5, 0);
+		pen.drawLine(6, -10);
+		pen.drawLine(-5, 0);
+		pen.drawLine(-6, 10);
+		pen.endFilledRegion();
 		
 		
 		
@@ -296,7 +316,7 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(-1000, 0);
 		pen.endFilledRegion();
 		
-		// sidewalk seperator betweenSidewalk
+		// sidewalk separator betweenSidewalk
 		pen.setLocation(225,329);
 
 		for (int i = 0; i < 4; i++) {
