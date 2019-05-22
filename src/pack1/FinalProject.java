@@ -283,14 +283,15 @@ public class FinalProject extends GraphicsProgram {
 		pen.move(0, 30);
 		}
 		
+		
 		// Top shadow for the horz grip bar 
-		pen.setLocation(0, 217);
-		pen.setColor(shadowTopBlock);
+		pen.setLocation(0, 216);
 		pen.startFilledRegion();
+		pen.setColor(shadowTopBlock);
 		pen.drawLine(1000, 0);
-		pen.drawLine(0, -2);
-		pen.drawLine(-1000,0);
-		pen.drawLine(0, 2);
+		pen.drawLine(0, -3);
+		pen.drawLine(-1000, 0);
+		pen.drawLine(0, 3);
 		pen.endFilledRegion();
 		
 		
