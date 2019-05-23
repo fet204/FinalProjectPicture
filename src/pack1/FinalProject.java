@@ -362,14 +362,38 @@ public class FinalProject extends GraphicsProgram {
 		head.setFilled(true);
 		head.setColor(Color.RED);
 		
-		GPolygon body = new GPolygon();
+		GPolygon leftArm = new GPolygon();
+		add(leftArm);
+		leftArm.addVertex(140, 210);
+		leftArm.addVertex(150, 210);
+		leftArm.addVertex(100, 250);
+		leftArm.addVertex(80, 290);
+		leftArm.addVertex(70, 290);
+		leftArm.addVertex(90, 250);
+		leftArm.setFilled(true);
+		leftArm.setColor(Color.ORANGE);
+		
+		GRect body = new GRect(150, 210, 20, 80);
 		add(body);
-		body.addVertex(140, 210);
-		body.addVertex(150, 210);
-		body.addVertex(80, 290);
-		body.addVertex(70, 290);
 		body.setFilled(true);
-		body.setColor(Color.ORANGE);
+		body.setColor(Color.GRAY);
+		
+		GPolygon leftLeg = new GPolygon();
+		add(leftLeg);
+		leftLeg.addVertex(150, 290);
+		leftLeg.addVertex(120, 325);
+		leftLeg.addVertex(110, 375);
+		leftLeg.addVertex(120, 375);
+		leftLeg.addVertex(130, 330);
+		leftLeg.addVertex(160, 310);//--
+		leftLeg.addVertex(180, 330);
+		leftLeg.addVertex(190, 375);
+		leftLeg.addVertex(200, 375);
+		leftLeg.addVertex(190, 330);
+		leftLeg.addVertex(170, 290);
+
+		leftLeg.setFilled(true);
+		leftLeg.setColor(Color.CYAN);
 		
 		
 		
