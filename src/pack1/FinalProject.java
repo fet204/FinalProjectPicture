@@ -336,9 +336,40 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(1000, 0);
 		
 		
+		// Creating Skateboard 
+		GOval backWheel = new GOval(100, 380, 20, 20);
+		add(backWheel);
+		backWheel.setFilled(true);
+		backWheel.setColor(Color.YELLOW);
 		
+		GOval frontWheel = new GOval(180, 380, 20, 20);
+		add(frontWheel);
+		frontWheel.setFilled(true);
+		frontWheel.setColor(Color.YELLOW);
 		
+		GPolygon board = new GPolygon();
+		add(board);
+		board.addVertex(50, 370);
+		board.addVertex(80, 380);
+		board.addVertex(220, 380);
+		board.addVertex(250, 370);
+		board.setFilled(true);
+		board.setColor(Color.GREEN);
 		
+		// Creating the rider for the board 
+		GOval head = new GOval(140, 170, 40, 40);
+		add(head);
+		head.setFilled(true);
+		head.setColor(Color.RED);
+		
+		GPolygon body = new GPolygon();
+		add(body);
+		body.addVertex(140, 210);
+		body.addVertex(150, 210);
+		body.addVertex(80, 290);
+		body.addVertex(70, 290);
+		body.setFilled(true);
+		body.setColor(Color.ORANGE);
 		
 		
 		
