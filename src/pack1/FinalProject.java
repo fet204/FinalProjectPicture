@@ -19,7 +19,7 @@ import acm.graphics.*;
 public class FinalProject extends GraphicsProgram {
 	
 	public static final int height = 500; // originally 500
-	public static final int width = 1010; // originally 1000
+	public static final int width = 1000; // originally 1000
 	
 	public void init() {
 		
@@ -256,7 +256,7 @@ public class FinalProject extends GraphicsProgram {
 		
 		
 		///*
-		// POLESSSSSSSSSSSSSSSSSssssssssssssssssssssssssssssssssssssssssssssssssssssss
+		// POLESSSSSSSSSSSSSSSSSsssssssssssssssssss
 		
 		// vertical rail way poles
 		pen.setLocation(0,325);
@@ -304,7 +304,7 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(-1000, 0);
 		pen.endFilledRegion();
 		
-		//POLESSSSSSSSSssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+		//POLESSSSSSSSSssssssssssssssssssss
 		//*/
 		
 		
@@ -336,13 +336,19 @@ public class FinalProject extends GraphicsProgram {
 		pen.drawLine(1000, 0);
 		
 		
-		// Creating Skateboard 
-		GOval backWheel = new GOval(100, 380, 20, 20);
+		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  JAVA 2 SECTION 
+		
+		// Constants 
+		final int WHEEL_WIDTH = 20;
+		final int HEAD_WIDTH = 40;
+		
+		
+		GOval backWheel = new GOval(100, 380, WHEEL_WIDTH, WHEEL_WIDTH);
 		add(backWheel);
 		backWheel.setFilled(true);
 		backWheel.setColor(Color.YELLOW);
 		
-		GOval frontWheel = new GOval(180, 380, 20, 20);
+		GOval frontWheel = new GOval(180, 380, WHEEL_WIDTH, WHEEL_WIDTH);
 		add(frontWheel);
 		frontWheel.setFilled(true);
 		frontWheel.setColor(Color.YELLOW);
@@ -357,7 +363,7 @@ public class FinalProject extends GraphicsProgram {
 		board.setColor(Color.GREEN);
 		
 		// Creating the rider for the board 
-		GOval head = new GOval(140, 170, 40, 40);
+		GOval head = new GOval(140, 170, HEAD_WIDTH, HEAD_WIDTH);
 		add(head);
 		head.setFilled(true);
 		head.setColor(Color.RED);
@@ -391,11 +397,34 @@ public class FinalProject extends GraphicsProgram {
 		leftLeg.addVertex(200, 375);
 		leftLeg.addVertex(190, 330);
 		leftLeg.addVertex(170, 290);
-
 		leftLeg.setFilled(true);
 		leftLeg.setColor(Color.CYAN);
+		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 		
-		
+		// Animation
+		while(true) {
+			
+			backWheel.move(4, 0);
+			frontWheel.move(4, 0);
+			board.move(4, 0);
+			head.move(4, 0);
+			leftArm.move(4, 0);
+			body.move(4, 0);
+			leftLeg.move(4, 0);
+			
+			pause(10);
+			
+			if (backWheel.getX() > width + 100) {
+				
+				backWheel.setLocation(100, backWheel.getY());
+				frontWheel.setLocation(180, frontWheel.getY());
+				board.setLocation(50, board.getY());
+				head.setLocation(140, head.getY());
+				leftArm.setLocation(140, leftArm.getY());
+				body.setLocation(150, body.getY());
+				leftLeg.setLocation(150, leftLeg.getY());
+			}
+		}
 		
 		
 		
