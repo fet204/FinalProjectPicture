@@ -404,25 +404,25 @@ public class FinalProject extends GraphicsProgram {
 		// Animation
 		while(true) {
 			
-			backWheel.move(4, 0);
-			frontWheel.move(4, 0);
-			board.move(4, 0);
-			head.move(4, 0);
-			leftArm.move(4, 0);
-			body.move(4, 0);
-			leftLeg.move(4, 0);
+			backWheel.move(3, 0);
+			frontWheel.move(3, 0);
+			board.move(3, 0);
+			head.move(3, 0);
+			leftArm.move(3, 0);
+			body.move(3, 0);
+			leftLeg.move(3, 0);
 			
 			pause(10);
 			
 			if (backWheel.getX() > width + 100) {
 				
-				backWheel.setLocation(100, backWheel.getY());
-				frontWheel.setLocation(180, frontWheel.getY());
-				board.setLocation(50, board.getY());
-				head.setLocation(140, head.getY());
-				leftArm.setLocation(140, leftArm.getY());
-				body.setLocation(150, body.getY());
-				leftLeg.setLocation(150, leftLeg.getY());
+				backWheel.setLocation(-100, backWheel.getY());
+				frontWheel.setLocation(-20, frontWheel.getY());
+				board.setLocation(-200, board.getY());
+				head.setLocation(-60, head.getY());
+				leftArm.setLocation(-200, leftArm.getY());
+				body.setLocation(-50, body.getY());
+				leftLeg.setLocation(-200, leftLeg.getY());
 			}
 		}
 		
