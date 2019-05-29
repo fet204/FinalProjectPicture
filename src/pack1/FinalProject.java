@@ -21,14 +21,22 @@ public class FinalProject extends GraphicsProgram {
 	public static final int height = 500; // originally 500
 	public static final int width = 1000; // originally 1000
 	
+	// Constants 
+	final int WHEEL_WIDTH = 20;
+	final int HEAD_WIDTH = 40;
+	
 	public void init() {
 		
 		setSize(width, height);
 		
-	} // init
+	} 
 	
 	public void run() {
+		// Java 2 Colors 
+		Color thatWhite = new Color (91, 128, 181);
 		
+		
+/*
 		// Start coordinate of where GPen will be and start
 		GPen pen = new GPen(500, 100); // orignially x is 500 and y is 100
 		add(pen);
@@ -255,7 +263,7 @@ public class FinalProject extends GraphicsProgram {
 		
 		
 		
-		///*
+		
 		// POLESSSSSSSSSSSSSSSSSsssssssssssssssssss
 		
 		// vertical rail way poles
@@ -305,7 +313,7 @@ public class FinalProject extends GraphicsProgram {
 		pen.endFilledRegion();
 		
 		//POLESSSSSSSSSssssssssssssssssssss
-		//*/
+
 		
 		
 		// Sidewalk side shadow definition
@@ -334,14 +342,12 @@ public class FinalProject extends GraphicsProgram {
 		pen.setLocation(0, 415);
 		pen.setColor(horzSideWalkSeperator);
 		pen.drawLine(1000, 0);
-		
+*/
 		
 		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  JAVA 2 SECTION 
 		
-		// Constants 
-		final int WHEEL_WIDTH = 20;
-		final int HEAD_WIDTH = 40;
-		
+		GImage img1 = new GImage("Background.png");
+		add(img1, 0, 0);
 		
 		GOval backWheel = new GOval(100, 380, WHEEL_WIDTH, WHEEL_WIDTH);
 		add(backWheel);
@@ -368,22 +374,45 @@ public class FinalProject extends GraphicsProgram {
 		head.setFilled(true);
 		head.setColor(Color.RED);
 		
-		GPolygon leftArm = new GPolygon();
-		add(leftArm);
-		leftArm.addVertex(140, 210);
-		leftArm.addVertex(150, 210);
-		leftArm.addVertex(100, 250);
-		leftArm.addVertex(80, 290);
-		leftArm.addVertex(70, 290);
-		leftArm.addVertex(90, 250);
-		leftArm.setFilled(true);
-		leftArm.setColor(Color.ORANGE);
-		
 		GRect body = new GRect(150, 210, 20, 80);
 		add(body);
 		body.setFilled(true);
 		body.setColor(Color.GRAY);
 		
+		GPolygon rightArm = new GPolygon();
+		add(rightArm);
+		rightArm.addVertex(140, 210);
+		rightArm.addVertex(120, 245);
+		rightArm.addVertex(110, 295);
+		rightArm.addVertex(120, 295);
+		rightArm.addVertex(130, 250);		
+		rightArm.addVertex(150, 220);
+		rightArm.addVertex(170, 220);//--
+		
+		rightArm.addVertex(180, 250);
+		rightArm.addVertex(190, 295);
+		rightArm.addVertex(200, 295);
+		rightArm.addVertex(190, 250);
+		rightArm.addVertex(180, 210);
+		rightArm.addVertex(170, 210);
+		rightArm.setFilled(true);
+		rightArm.setColor(Color.LIGHT_GRAY);
+		
+//		GPolygon leftArm = new GPolygon();
+//		add(leftArm);
+//		leftArm.addVertex(140, 210);
+//		leftArm.addVertex(150, 210);
+//		leftArm.addVertex(150, 220);
+//		leftArm.addVertex(100, 250);
+//		leftArm.addVertex(80, 290);
+//		leftArm.addVertex(70, 290);
+//		leftArm.addVertex(90, 250);
+//		leftArm.setFilled(true);
+//		leftArm.setColor(thatWhite); //Color.ORANGE);
+		
+		// >>>>> PLACE BODY HERE 
+
+		// >>>>>>>>>>
 		GPolygon leftLeg = new GPolygon();
 		add(leftLeg);
 		leftLeg.addVertex(150, 290);
@@ -402,29 +431,31 @@ public class FinalProject extends GraphicsProgram {
 		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 		
 		// Animation
-		while(true) {
-			
-			backWheel.move(3, 0);
-			frontWheel.move(3, 0);
-			board.move(3, 0);
-			head.move(3, 0);
-			leftArm.move(3, 0);
-			body.move(3, 0);
-			leftLeg.move(3, 0);
-			
-			pause(10);
-			
-			if (backWheel.getX() > width + 100) {
-				
-				backWheel.setLocation(-100, backWheel.getY());
-				frontWheel.setLocation(-20, frontWheel.getY());
-				board.setLocation(-200, board.getY());
-				head.setLocation(-60, head.getY());
-				leftArm.setLocation(-200, leftArm.getY());
-				body.setLocation(-50, body.getY());
-				leftLeg.setLocation(-200, leftLeg.getY());
-			}
-		}
+//		while(true) {
+//			
+//			backWheel.move(3, 0);
+//			frontWheel.move(3, 0);
+//			board.move(3, 0);
+//			head.move(3, 0);
+//			//leftArm.move(3, 0);
+//			body.move(3, 0);
+//			leftLeg.move(3, 0);
+//			rightArm.move(3, 0);
+//			
+//			pause(10);
+//			
+//			if (backWheel.getX() > width + 100) {
+//				
+//				backWheel.setLocation(-100, backWheel.getY());
+//				frontWheel.setLocation(-20, frontWheel.getY());
+//				board.setLocation(-200, board.getY());
+//				head.setLocation(-60, head.getY());
+//				//leftArm.setLocation(-200, leftArm.getY());
+//				body.setLocation(-50, body.getY());
+//				leftLeg.setLocation(-200, leftLeg.getY());
+//				rightArm.setLocation(-200, rightArm.getY());
+//			}
+//		}
 		
 		
 		
@@ -435,63 +466,7 @@ public class FinalProject extends GraphicsProgram {
 		
 		
 		
-		/*
-		// Left side parabola
-		pen.setColor(water);
-		pen.move(-5, 83);
-		//pen.move(0,500);
-		double y = 0;
-		for (int i = 2; i <= 284; i ++) {
-			
-			if (i % 2 == 0) {
-				y = ((i*i)/80);
-				System.out.println(y);
-			}
-			
-			pen.drawLine(y, 0);
-			pen.move(-y, -1);
-			
-		}// Left side blue thing
-		
-		
-		// this is going to be the tree trunk
-		pen.setColor(Color.black);
-		pen.move(1005, 0);
-		pen.move(-70, 40);
-		
-		for(int i = 0; i <= 250; i ++) {
-			int var1 = 0;
-			if(i % 2 == 0) {
-				pen.setColor(brownWood);
-				pen.drawLine(25, 0);
-				pen.move(0, -1);
-				pen.drawLine(-25, 0);
-			}
-		}
-		
-		// leaf 1
-		pen.setColor(leafGreen1);
-		pen.startFilledRegion();
-		pen.drawLine(-50, -25);
-		pen.drawLine(-20, 0);
-		pen.drawLine(-20, 20);
-		pen.drawLine(0, 15);
-		pen.drawLine(10, -15);
-		pen.drawLine(20, -5);
-		pen.endFilledRegion();
-		
-		// leaf2 
-		pen.move(60, 10);
-		pen.setColor(leafGreen2);
-		pen.startFilledRegion();
-		pen.drawLine(-25, -50);
-		pen.drawLine(-25, 10);
-		pen.drawLine(-10, 50);
-		pen.drawLine(10, -10);
-		pen.drawLine(10, -25);
-		pen.drawLine(42, 40);
-		pen.endFilledRegion();
-		*/
+
 	
 	}
 
