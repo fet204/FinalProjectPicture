@@ -11,7 +11,7 @@
 package pack1;
 
 import acm.program.GraphicsProgram;
-import acm.graphics.GPen;
+//import acm.graphics.GPen;
 import java.awt.*;
 
 import acm.graphics.*;
@@ -32,8 +32,7 @@ public class FinalProject extends GraphicsProgram {
 	} 
 	
 	public void run() {
-		// Java 2 Colors 
-		Color thatWhite = new Color (91, 128, 181);
+
 		
 		
 /*
@@ -345,19 +344,28 @@ public class FinalProject extends GraphicsProgram {
 */
 		
 		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  JAVA 2 SECTION 
+		// Java 2 Colors 
+		Color thatWhite = new Color (61, 95, 132);
+		Color colorBoard = new Color(26, 40, 53);
+		Color pants = new Color (37, 50, 82);
+		Color shirt = new Color (24, 33, 56);//63, 45, 59);
+		Color skin = new Color (120, 104, 105);
+		Color colorhat = new Color (67, 75, 97);
 		
+		// importing the background image
 		GImage img1 = new GImage("Background.png");
 		add(img1, 0, 0);
 		
+		// Creating the board 
 		GOval backWheel = new GOval(100, 380, WHEEL_WIDTH, WHEEL_WIDTH);
 		add(backWheel);
 		backWheel.setFilled(true);
-		backWheel.setColor(Color.YELLOW);
+		backWheel.setColor(thatWhite);
 		
 		GOval frontWheel = new GOval(180, 380, WHEEL_WIDTH, WHEEL_WIDTH);
 		add(frontWheel);
 		frontWheel.setFilled(true);
-		frontWheel.setColor(Color.YELLOW);
+		frontWheel.setColor(thatWhite);
 		
 		GPolygon board = new GPolygon();
 		add(board);
@@ -366,18 +374,18 @@ public class FinalProject extends GraphicsProgram {
 		board.addVertex(220, 380);
 		board.addVertex(250, 370);
 		board.setFilled(true);
-		board.setColor(Color.GREEN);
+		board.setColor(colorBoard);
 		
 		// Creating the rider for the board 
 		GOval head = new GOval(140, 170, HEAD_WIDTH, HEAD_WIDTH);
 		add(head);
 		head.setFilled(true);
-		head.setColor(Color.RED);
+		head.setColor(skin);
 		
 		GRect body = new GRect(150, 210, 20, 80);
 		add(body);
 		body.setFilled(true);
-		body.setColor(Color.GRAY);
+		body.setColor(shirt);
 		
 		GPolygon rightArm = new GPolygon();
 		add(rightArm);
@@ -388,7 +396,6 @@ public class FinalProject extends GraphicsProgram {
 		rightArm.addVertex(130, 250);		
 		rightArm.addVertex(150, 220);
 		rightArm.addVertex(170, 220);//--
-		
 		rightArm.addVertex(180, 250);
 		rightArm.addVertex(190, 295);
 		rightArm.addVertex(200, 295);
@@ -396,23 +403,8 @@ public class FinalProject extends GraphicsProgram {
 		rightArm.addVertex(180, 210);
 		rightArm.addVertex(170, 210);
 		rightArm.setFilled(true);
-		rightArm.setColor(Color.LIGHT_GRAY);
+		rightArm.setColor(shirt);
 		
-//		GPolygon leftArm = new GPolygon();
-//		add(leftArm);
-//		leftArm.addVertex(140, 210);
-//		leftArm.addVertex(150, 210);
-//		leftArm.addVertex(150, 220);
-//		leftArm.addVertex(100, 250);
-//		leftArm.addVertex(80, 290);
-//		leftArm.addVertex(70, 290);
-//		leftArm.addVertex(90, 250);
-//		leftArm.setFilled(true);
-//		leftArm.setColor(thatWhite); //Color.ORANGE);
-		
-		// >>>>> PLACE BODY HERE 
-
-		// >>>>>>>>>>
 		GPolygon leftLeg = new GPolygon();
 		add(leftLeg);
 		leftLeg.addVertex(150, 290);
@@ -427,35 +419,52 @@ public class FinalProject extends GraphicsProgram {
 		leftLeg.addVertex(190, 330);
 		leftLeg.addVertex(170, 290);
 		leftLeg.setFilled(true);
-		leftLeg.setColor(Color.CYAN);
+		leftLeg.setColor(pants);
+		
+		// Hat of the rider
+		GArc hat = new GArc(135, 165, 50, 50, 0, 170);
+		add(hat);
+		hat.setFilled(true);
+		hat.setColor(colorhat);
+		
+		GOval rim = new GOval(115, 180, 50, 10);
+		add(rim);
+		rim.setFilled(true);
+		rim.setColor(colorhat);
+		
+		
+		
+		
 		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 		
 		// Animation
-//		while(true) {
-//			
-//			backWheel.move(3, 0);
-//			frontWheel.move(3, 0);
-//			board.move(3, 0);
-//			head.move(3, 0);
-//			//leftArm.move(3, 0);
-//			body.move(3, 0);
-//			leftLeg.move(3, 0);
-//			rightArm.move(3, 0);
-//			
-//			pause(10);
-//			
-//			if (backWheel.getX() > width + 100) {
-//				
-//				backWheel.setLocation(-100, backWheel.getY());
-//				frontWheel.setLocation(-20, frontWheel.getY());
-//				board.setLocation(-200, board.getY());
-//				head.setLocation(-60, head.getY());
-//				//leftArm.setLocation(-200, leftArm.getY());
-//				body.setLocation(-50, body.getY());
-//				leftLeg.setLocation(-200, leftLeg.getY());
-//				rightArm.setLocation(-200, rightArm.getY());
-//			}
-//		}
+		while(true) {
+			
+			backWheel.move(3, 0);
+			frontWheel.move(3, 0);
+			board.move(3, 0);
+			head.move(3, 0);
+			body.move(3, 0);
+			leftLeg.move(3, 0);
+			rightArm.move(3, 0);
+			hat.move(3, 0);
+			rim.move(3, 0);
+			
+			pause(10);
+			
+			if (backWheel.getX() > width + 100) {
+				
+				backWheel.setLocation(-100, backWheel.getY());
+				frontWheel.setLocation(-20, frontWheel.getY());
+				board.setLocation(-200, board.getY());
+				head.setLocation(-60, head.getY());
+				body.setLocation(-50, body.getY());
+				leftLeg.setLocation(-200, leftLeg.getY());
+				rightArm.setLocation(-200, rightArm.getY());
+				hat.setLocation(-65, hat.getY());
+				rim.setLocation(-85, rim.getY());
+			}
+		}
 		
 		
 		
